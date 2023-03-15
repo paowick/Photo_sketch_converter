@@ -11,37 +11,12 @@
 <body>
     <!-- Display Uploaded Photo -->
     <h2>Uploaded Photo:</h2>
-    <img src="#" id="preview" alt="Preview" style="max-width: 1000px; max-height: 500px;">
+    <img src="#" id="preview" alt="Preview" >
 
     <form action="/img" method="post" enctype="multipart/form-data">
 		<label for="photo">Choose a photo:</label>
 		<input type="file" id="photo" name="photo" accept="image/*"><br><br>
 		<input type="submit" value="Upload">
 	</form>
-	
-	<!-- Script to Preview the Uploaded Photo -->
-	<script>
-		// Get the input element and the preview element
-		const input = document.getElementById('photo');
-		const preview = document.getElementById('preview');
-
-		// Listen for changes to the input element
-		input.addEventListener('change', function() {
-			// If a file is selected
-			if (input.files && input.files[0]) {
-				// Create a FileReader object
-				const reader = new FileReader();
-
-				// When the file is loaded
-				reader.addEventListener('load', function() {
-					// Set the preview image source to the loaded data URL
-					preview.src = reader.result;
-				});
-
-				// Read the file as a data URL
-				reader.readAsDataURL(input.files[0]);
-			}
-		});
-	</script>
 </body>
 </html>
