@@ -1,10 +1,9 @@
-
 // Get the input element and the preview element
-const input = document.getElementById('photo');
+const input = document.getElementById('.photo');
 const preview = document.getElementById('preview');
 
 // Listen for changes to the input element
-input.addEventListener('change', function () {
+input.addEventListener('change', function () {  // bug here
     // If a file is selected
     if (input.files && input.files[0]) {
         // Create a FileReader object

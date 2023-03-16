@@ -3,6 +3,7 @@ const spawn = require("child_process").spawn;
 const app = express()
 const multer  = require('multer');
 
+app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 
 // Configure Multer middleware to handle file uploads
