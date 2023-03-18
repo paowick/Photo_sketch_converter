@@ -1,5 +1,5 @@
 // Get the input element and the preview element
-const input = document.getElementById('.photo');
+const input = document.getElementById('photo');
 const preview = document.getElementById('preview');
 
 // Listen for changes to the input element
