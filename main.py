@@ -12,8 +12,8 @@ def main(argv):
         return cv2.divide(x,255-y,scale=256)
     final_img = dodgeV2(img_gray,img_smoothing)
 
-    
-    cv2.imshow("final", final_img)
+    reFinlImg = cv2.resize(final_img,[500,500])
+    cv2.imshow("final", reFinlImg)
     cv2.waitKey(0)
 
 
