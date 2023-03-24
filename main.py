@@ -12,8 +12,11 @@ def main(argv):
         return cv2.divide(x,255-y,scale=256)
     final_img = dodgeV2(img_gray,img_smoothing)
 
-    reFinlImg = cv2.resize(final_img,[500,500])
-    cv2.imshow("final", reFinlImg)
+
+    if(final_img.shape[0] < 300 or final_img.shape[1] < 300):
+        final_img = cv2.resize(final_img,[500,500])
+        
+    cv2.imshow("final", final_img)
     cv2.waitKey(0)
 
 
